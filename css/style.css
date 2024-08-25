@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color-primario:#F3F5FC;
+    --color-secundario: #FFFFFF;
+    --color-terciario: #0A3871;
+    --color-cuaternario: #D8DFE8;
+
+    --fuente-inter: "Inter", sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+}
+.container{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.izq{
+    width: 100px;
+    margin: 40px 0 40px 40px;
+    text-align: center;
+    height: 90vh;
+    
+}
+.cen{
+    width: 700px;
+    height: 80vh;
+    margin: 40px 80px 40px 80px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+}
+textarea{
+    background-color: var(--color-primario);
+    width: 100%;
+    height: 50vh;
+    border: none;
+    resize: none;
+    color:#0A3871;
+    font-family: var(--fuente-inter);
+    font-weight:300;
+    font-size: 32pt;
+}
+textarea::placeholder{
+    color:#0A3871;
+    font-size: 32pt;
+}
+svg{
+    float: left;
+    color: #495057;
+}
+p{
+    text-align: left;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    color: #495057;
+}
+p.adv{
+    font-family: var(--fuente-inter);
+    font-weight: 100;
+    font-size: 12pt;
+}
+.botones{
+    padding-top: 50px;
+    margin-top: auto;
+}
+.enc{
+    background-color: var(--color-terciario);
+    width: 328px;
+    height: 67px;
+    border: none;
+    border-radius: 24px;
+    float: left;
+    color: #FFFFFF;
+    font-size: 16pt;
+    font-family: var(--fuente-inter);
+    font-weight: 100;
+}
+.des{
+    background-color: var(--color-cuaternario);
+    width: 328px;
+    height: 67px;
+    border-color: #0A3871;
+    border-radius: 24px;
+    float:right;
+    color: var(--color-terciario);
+    font-size: 16pt;
+    font-family: var(--fuente-inter);
+    font-weight: 100;
+}
+.der{
+    background-color: var(--color-secundario);
+    width: 400px;
+    height: 90vh;
+    margin: 40px 40px 40px 0;
+    border-radius: 32px;
+    box-shadow: 0 20px 15px 0 rgb(0 0 0 / 10%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    color:var(--color-terciario);
+    font-size: 24pt;
+}
+p.derText{
+    font-family: var(--fuente-inter);
+    font-style: normal;
+    font-size: 16pt;
+    color: var(--color-terciario);
+    text-align: center;
+    width: 85%;
+}
+
+
+
+#cajaResp{
+    display: flex;
+    flex-flow: column;
+}
+#cajaResp .resultado {
+    color: var(--color-terciario);
+    font-size: 24pt;
+    font-family: var(--fuente-inter);
+    font-weight: 100;
+    text-align: left;
+    width: 336px;
+    height:75vh;
+}
+#cajaResp .copiar-btn {
+    background-color: var(--color-cuaternario);
+    width: 328px;
+    height: 67px;
+    border-color: #0A3871;
+    border-radius: 24px;
+    float:right;
+    color: var(--color-terciario);
+    font-size: 16pt;
+    font-family: var(--fuente-inter);
+    font-weight: 100;
+    text-align: center;
+    
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .arriba {
+        order: 1;
+        width: 100%;
+        height: 10%;
+        text-align: left;
+        margin: 40px 0 auto;
+    }
+
+    .medio {
+        order: 2;
+        height: 80%;
+    }
+
+    .abajo {
+        order: 3;
+        width: 90%;
+        height: 10%;
+    }
+    #cajaResp{
+        height: 180px;
+    }
+    #cajaResp img {
+        display: none;
+    }
+    #cajaResp .copiar-btn {
+        width: 80vw;
+        height: 400px;
+        border-color: #0A3871;
+        border-radius: 24px;
+        float:right;
+        color: var(--color-terciario);
+        font-size: 16pt;
+        font-family: var(--fuente-inter);
+        font-weight: 100;
+        text-align: center;
+        
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .arriba, .medio, .abajo {
+        width: 95%; 
+        order: initial; 
+    }
+
+    #cajaResp {
+        width: 95%;
+        order: initial;
+    }
+    .botones {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .botones button {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+}

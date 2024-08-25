@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="izq arriba">
+            <img src="imgs/Logo.png" alt="logo alura">
+        </div>
+        <div class="cen medio">
+            <div>
+                <textarea name="IngText" id="ingresado" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="botones">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"/></svg>
+                <p class="adv">Solo letras minúsculas y sin acentos</p>
+                <button class="enc" onclick="encripta()">Encriptar</button>
+                <button class="des" onclick="desencripta()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="der abajo">
+            <div id="cajaResp">
+                <img src="imgs/Muñeco.svg" alt="muñeco">
+                <h1>Ningún mensaje fue encontrado</h1>
+                <p class="derText">Ingresa el texto que desees encriptar o desencriptar</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
